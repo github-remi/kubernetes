@@ -45,18 +45,18 @@ You can follow same procedure in the official  AWS document [Getting started wit
    --zones <AZ-1>,<AZ-2>
    
    example:
-   eksctl create cluster --name valaxy-cluster \
-      --region ap-south-1 \
+   eksctl create cluster --name remi-cluster \
+      --region us-east-1 \
    --node-type t2.small \
     ```
 
 5. To delete the EKS clsuter 
    ```sh 
-   eksctl delete cluster valaxy --region ap-south-1
+   eksctl delete cluster remi --region us-east-1
    ```
    
 6. Validate your cluster using by creating by checking nodes and by creating a pod 
    ```sh 
    kubectl get nodes
-   kubectl run pod tomcat --image=tomcat 
+   kubectl run nginx --image=nginx 
    ```
